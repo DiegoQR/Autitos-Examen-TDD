@@ -92,7 +92,13 @@ export class Car{
                     this.yPos = newYPosition;
                 }
                 break;
-        }
+            case "E":
+                var newXPosition = this.xPos + advancedJumps;
+                if (this.isPositionValid([this.xPos, newXPosition])){
+                    this.xPos = newXPosition;
+                }
+                break;
+    }
     }
 
 }
