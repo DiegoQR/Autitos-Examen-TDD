@@ -98,6 +98,12 @@ export class Car{
                     this.xPos = newXPosition;
                 }
                 break;
+            case "O":
+                var newXPosition = this.xPos - advancedJumps;
+                if (this.isPositionValid([this.xPos, newXPosition])){
+                    this.xPos = newXPosition;
+                }
+                break;
     }
     }
 
