@@ -80,9 +80,6 @@ describe("Examen. Probando el comando de saltar", () => {
   it("Salta el auto dos posiciones hacia abajo", () => {
     expect(moveCar("S", new Car(1,4,"S", [5,5] ))).toEqual([1, 2, "S"]);
   });
-  it("Salta el auto dos posiciones hacia arriba", () => {
-    expect(moveCar("S", new Car(1,2,"N", [5,5] ))).toEqual([1, 4, "N"]);
-  });
   it("Salta el auto dos posiciones hacia el este", () => {
     expect(moveCar("S", new Car(1,4,"E", [5,5] ))).toEqual([3, 4, "E"]);
   });

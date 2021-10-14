@@ -78,12 +78,20 @@ export class Car{
         }
     }
 
-    jump(){
-        if(this.direcction == "N"){
-            var newYPosition = this.yPos + 2;
-            if (this.isPositionValid([this.xPos, newYPosition])){
-                this.yPos = newYPosition;
-            }
+    jump(advancedJumps = 2){
+        switch(this.direcction){
+            case "N":
+                var newYPosition = this.yPos + advancedJumps;
+                if (this.isPositionValid([this.xPos, newYPosition])){
+                    this.yPos = newYPosition;
+                }
+                break;
+            case "S":
+                var newYPosition = this.yPos - advancedJumps;
+                if (this.isPositionValid([this.xPos, newYPosition])){
+                    this.yPos = newYPosition;
+                }
+                break;
         }
     }
 
